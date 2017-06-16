@@ -162,7 +162,7 @@ class Commit(Created, Authored):
                             max_length=100,)
     sha = dd.CharField(_("Sha Hash"),
                        max_length=40,
-                       # primary_key=True, #Causes Issues with extjs6
+                       primary_key=True, #Causes Issues with extjs6
                        unique=True,
                        editable=False)
     url = dd.models.URLField(_("Commit page"),
@@ -208,7 +208,7 @@ class Commit(Created, Authored):
             id = None
 
         params = dict(
-            id = id,
+            # id = id,
             repository=repo,
             user=None,
             ticket=None,
